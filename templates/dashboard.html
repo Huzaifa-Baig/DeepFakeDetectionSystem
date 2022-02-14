@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br />
+{% for message in get_flashed_messages() %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+
+<div>
+    <h1>Dashboard</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Date Joined</th>
+            </tr>
+        </thead>
+        <tr>
+            <td><a href="{{ url_for('update', id=current_user.id)}}">{{ current_user.name }} </a></td>
+            <td>{{current_user.email}}</td>
+            <td>{{current_user.favorite_color}}</td>
+            <td>{{current_user.username}}</td>
+            <td>{{current_user.date_added}}</td>
+        </tr>
+    </table>
+    <a class="btn btn-danger" href="{{ url_for('delete', id=current_user.id)}}">Delete</a>
+</div>
+<br>
+    
+<a href="{{ url_for('update', id=current_user.id)}}">Update Credentials </a>
+   
+{% endblock %}

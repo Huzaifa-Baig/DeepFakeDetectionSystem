@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+  <br />
+  {% for message in get_flashed_messages() %}
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+
+  <h1 class="jumbotron">Image Classification</h1>
+    <br><br>
+    <div class="row">
+      <div class="col-auto col-md-4 mx-auto">
+        <form class="form-horizontal" action="/Detect" method="POST" enctype="multipart/form-data">
+    
+          <div class="mb-3">
+              <label for="" class="form-label"></label>
+              <input type="file" name="file"  class="form-control" aria-describedby="helpId" required >
+              <small id="helpId" class="text-muted">Upload Your Image</small>
+          </div>
+          <br>
+          <input type="submit" value="Predict" class="btn btn-success">
+        </form>
+      </div>
+
+      <div class = "col-md-4 col-auto mx-auto">
+        {% if filename %}
+          <div class=" col-7" >
+            <img class='img-thumbnail figure-img' src="{{ url_for('display_image', filename=filename) }}" height="170px" width="150px"/>
+          </div>
+          
+          <div class=" col-auto" >
+            <h3>Prediction :</h3>
+            <p>{{ value }}</p>
+          </div>
+        {% endif %}
+        
+      </div>
+    </div>
+    
+  </div>
+
+{% endblock %}

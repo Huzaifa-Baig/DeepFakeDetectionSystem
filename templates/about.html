@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-auto col-md-6 p-3">
+    <article>
+    <h5>FEATURES OF OUR APPLICATION</h5>
+    
+    <p>DeepFake detector provides two unique methods to reveal hidden truth in your image.</p>
+    <p>Error Level Analysis(ELA):
+       <br> ELA works on the basis that, an image when altered or tampered the compression ratio of the modified part will change when compared to the rest. By having a closer look at the ELA image, one can determine whether the image has been tampered with or not.</p>
+    <p>Metadata Analysis: <br>
+    Once you take a photo with your camera, a lot of information is embedded into the image (Like the name of camera, date of capure etc) which is known as Metadata, ie Data about Data. Metadata is altered when tampered with any image editing softwares. This anomaly can be detected using metadata analyzer.
+    </p>
+    </article>
+    </div> 
+      
+    <div class="col-auto col-md-6 p-3">
+
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp; Developer Team</h3> <br>
+
+        <div class="rit_1 mx-auto">
+           <img class="profile" src="{{url_for('static',filename='images/profileicon.jpg')}}" height="60px" alt="">
+            <span>Farooq Aziz</span>
+            <label></label>
+            <a href="https://mail.google.com">farooqazizbaloch@gmail.com</a>
+        </div>
+        
+        <div class="rit_1 mx-auto">
+            <img class="profile" src="{{url_for('static',filename='images/profileicon.jpg')}}"  height="60px" alt="">
+            <span>Muhammad Muzammil Ayub</span>
+            <label></label>
+            <a href="https://mail.google.com/">muzammil.dstt786@gmail.com</a>
+        </div>
+        
+        <div class="rit_1 mx-auto">
+            <img class="profile" src="{{url_for('static',filename='images/profileicon.jpg')}}"  height="60px" alt="">
+            <span>Huzaifa Baig</span>
+            <label></label>
+            <a href="https://mail.google.com/">www.huzaifa199872@gmail.com</a>
+        </div>
+        
+        <div class="rit_2 mx-auto">
+            <span>Want to join <label>our team?</label></span>
+            <p>Send your resume to 
+            <a href="#">mfh_fyp@dfdapp.com</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

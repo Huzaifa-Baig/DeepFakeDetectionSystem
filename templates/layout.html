@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - My Flask Application</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='content/site.css')}}">
+    <link rel="shortcut icon"
+          href="{{ url_for('static', filename='favicon_io/favicon.ico') }}">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+
+    <link rel="icon"
+          type="image/png"
+          sizes="180x180"
+          href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+
+    <link rel="manifest"
+          href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
+    
+</head>
+
+<body>
+    <div class="header">
+        {% include 'includes/navbar.html' %}
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+        <hr />
+        {% include 'includes/footer.html' %}
+    </div>
+        
+    
+    
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

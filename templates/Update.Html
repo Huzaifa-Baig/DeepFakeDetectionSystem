@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<br />
+{% for message in get_flashed_messages() %}
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+<div>
+
+    <h1>User Update List:</h1>
+    <br />
+    <form action="/update/{{ name_to_update.id }}" method="post" class="col-auto  shadow p-3 mb-5 bg-body rounded">
+
+        {{ form.hidden_tag() }}
+
+        {{ form.name.label(class="form-label") }}
+        {{ form.name(class="form-control", value = name_to_update.name ) }}
+        <br />
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control", value = name_to_update.email ) }}
+        <br />
+        {{ form.favorite_color.label(class="form-label") }}
+        {{ form.favorite_color(class="form-control" , value = name_to_update.favorite_color) }}
+        <br />
+        {{ form.submit(class="btn btn-secondary") }}
+
+        <a class="btn btn-danger" href="{{ url_for('delete', id=id)}}">Delete User</a>
+    </form>
+</div>
+
+{% endblock %}

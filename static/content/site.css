@@ -1,0 +1,77 @@
+/* Navbar Items */
+.header{ 
+    background-color:#3b3345; 
+    width:100%; 
+    border-bottom:2px solid #5d5665;
+}
+.logo{ 
+    padding-top:13px; 
+    padding-bottom:8px; 
+    font-family: 'Pacifico', cursive; 
+    font-size:1.784em; 
+    color:#55c3a5; 
+    line-height:30px;
+}
+.lefter{
+    float:left
+}
+/*Links*/
+.face{
+    background:url(../images/face1.png) no-repeat;
+    height:77px;
+    width:77px; 
+    display:block; 
+    float:left; 
+}
+.face:hover{
+    background:url(../images/face1_hover.png) no-repeat; 
+    height:77px; 
+    width:77px; 
+}
+.gmail{
+    background:url(../images/gmail.png) no-repeat; 
+    height:77px; 
+    width:77px; 
+    display:block; 
+    margin-left:10px; 
+    float:left; 
+}
+.gmail:hover{
+    background:url(../images/gmail_hover.png) no-repeat; 
+    height:77px; 
+    width:77px; 
+}
+.twit{
+    background:url(../images/twit.png) no-repeat;
+    height:77px;
+    width:77px;
+    display:block;
+    margin-left:8px;
+    float:left;
+}
+.twit:hover{
+    background:url(../images/twit_hover.png) no-repeat;
+    height:77px;
+    width:77px;
+}
+
+
+/**/
+
+
+
+
+.rit_1									{border:1px solid #e1e0e3; border-radius:50px; width:403px; float:left; position:relative; behavior: url(PIE.htc);padding: 2px 0; margin-bottom:15px;}
+.rit_1 img								{margin:1px 12px 1px 2px; float:left; border-radius:50%; position:relative; behavior: url(PIE.htc);}
+.rit_1 span								{font-family: 'novecento_wide_bookbold'; font-weight:normal; font-style:normal; font-size:0.929em; color:#55c3a5; text-transform:uppercase; display:block; padding-top:18px;}
+.rit_1 label							{font-family: 'novecento_widemedium';font-weight:normal; font-style:normal; font-size:0.795em; color:#949198; text-transform:uppercase; display:block;}	
+
+.rit_1 a								{padding-top:1px; display:block; font-size:0.923em;}
+
+.rit_2									{border: 1px solid #E1E0E3; border-radius: 50px; float: left; line-height: 25px; margin-bottom: 15px; padding: 1px 0; position: relative;
+    text-align: center; behavior: url(PIE.htc);    width: 403px;}
+.rit_2 span								{font-family: 'novecento_wide_bookbold'; font-weight:normal; font-style:normal; font-size:1.075em; color:#3b3345; text-transform:uppercase;  padding-top:10px;}
+.rit_2 label							{font-family: 'novecento_widenormal';font-weight:normal; font-style:normal; font-size:1.143em; color:#949198; text-transform:uppercase; }
+
+
+.rit_2 a{ color: #55C3A5;}

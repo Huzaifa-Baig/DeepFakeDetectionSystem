@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <br>
+    <br>
+    <h1>Welcome to</h1>
+
+    <h2>DeepFake Detection</h2>
+
+    <p class="lead">Where your detection needs will be met with a smile.</p>
+    
+
+    {%if current_user.is_authenticated %}
+        <a class="btn btn-outline-secondary" href="{{ url_for('Detect_page')}}" >Start Detecting &raquo;</a>
+        <a class="btn btn-outline-secondary" href="{{ url_for('logout')}}">logout &raquo;</a>
+    {%else%}
+        <a class="btn btn-outline-secondary" href="{{ url_for('login')}}">Login</a>     
+    {% endif %}
+    
+    <br>
+    <br>
+    <br>
+</div>
+
+{% endblock %}
